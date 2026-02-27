@@ -1,0 +1,100 @@
+@import "color.css";
+
+
+* {
+    border: none;
+    font-family: "SF Pro Display Fonts", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @on_surface;
+}
+
+tooltip {
+  background: @background;
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+
+tooltip label {
+  color: @on_surface;
+}
+
+#workspaces {
+    margin: 0 10px;
+    background-color: transparent;
+    transition: all 200ms ease-in-out;
+}
+
+#workspaces button {
+    background-color: transparent;
+    padding: 0px 5px;
+    margin: 7px;
+    border-radius: 50px;
+    transition: all 200ms ease-in-out;
+}
+
+
+
+#workspaces button.active{
+    padding: 0 10px;
+    margin: 7px;
+    border-radius: 90px;
+    background-color: @primary;
+    color: #121212;
+}
+
+#workspaces button:hover{
+    background: @inverse_primary;
+    padding: 0 10px;
+    margin: 7px;
+    border-radius: 90px;
+
+}
+
+#clock, 
+#battery,
+#tray,
+#pulseaudio{
+    padding: 0 10px;
+    margin: 7px;
+    border-radius: 90px;
+    background-color: @primary;
+    color: #121212;
+}
+
+#pulseaudio{
+    padding: 0 10px;
+}
+
+#battery{
+    padding: 0 9px;
+}
+
+#power-profiles-daemon{
+    padding: 0 10px;
+    margin: 7px;
+    border-radius: 50px;
+    background-color: @primary;
+    color: #121212;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+menu {
+    border-radius: 15px;
+    background: #161320;
+    color: #B5E8E0;
+}
+menuitem {
+    border-radius: 15px;
+}
+
+

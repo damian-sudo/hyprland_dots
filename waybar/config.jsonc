@@ -1,0 +1,115 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "idle_inhibitor",
+        "clock",
+        "power-profiles-daemon",
+        "hyprland/window",
+    ],
+    
+    "modules-center":[
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "backlight",
+        "tray",
+        "pulseaudio",
+        "battery", 
+        "custom/power"
+    ],
+    
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+
+    "hyprland/workspaces": {
+	    "format": "{name}",
+	    "format-icons": {
+		    "1": "",
+		    "2": "",
+		    "3": "",
+		    "4": "",
+		    "active": "",
+		    "default": ""
+	    },
+       "persistent-workspaces": {
+            "*": 3, // 5 workspaces by default on every monitor
+            "HDMI-A-1": 3 // but only three on HDMI-A-1
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 10, // Characters count
+        "separate-outputs": true
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",  "max-length": 100, // Characters count
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+
+    "custom/power": {
+        "format" : "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "shutdown -h now",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate",
+        },
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    }    
+
+}
