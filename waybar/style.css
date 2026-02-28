@@ -13,6 +13,7 @@
 window#waybar {
     background: transparent;
     color: @on_surface;
+    margin: 5px; 
 }
 
 tooltip {
@@ -25,7 +26,7 @@ tooltip label {
 }
 
 #workspaces {
-    margin: 0 10px;
+    margin: 0 5px;
     background-color: transparent;
     transition: all 200ms ease-in-out;
 }
@@ -33,7 +34,7 @@ tooltip label {
 #workspaces button {
     background-color: transparent;
     padding: 0px 5px;
-    margin: 7px;
+    margin: 5px;
     border-radius: 50px;
     transition: all 200ms ease-in-out;
 }
